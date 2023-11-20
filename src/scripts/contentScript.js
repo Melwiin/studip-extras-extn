@@ -11,7 +11,6 @@ const createFileObserver = () => {
       viewButton.classList.add("ui-button");
       viewButton.classList.add("viewfile-button");
       viewButton.innerHTML = "View file";
-      viewButton.before = "none";
 
       if (buttons == null) {
         console.error("No buttons found"); // Can only happen if StudIP changes the class name
