@@ -45,7 +45,7 @@ const createFileObserver = () => {
 const init = async () => {
     /* This function is async everything initialized here should start without await(ing) something! */
     createFileObserver();
-    injectCustomCss();
+    // injectCustomCss(); Work in progress
 };
 
 window.addEventListener("load", () => {
