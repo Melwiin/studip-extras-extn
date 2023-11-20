@@ -15,12 +15,15 @@
         "default_title": "StudIP - Extras",
         "default_popup": "src/html/popup.html"
     },
+    "icons": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    },
     "permissions": [
         "scripting",
         "tabs",
         "storage",
-        "activeTab",
-        "https://e-learning.tuhh.de/*",
-        "http://e-learning.tuhh.de/*"
+        "activeTab"
     ]
 }
