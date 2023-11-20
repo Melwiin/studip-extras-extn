@@ -1,26 +1,32 @@
-window.onload = function() {
-    setTimeout(()=>{
-        setInterval(()=>{
-            // Search if file is loaded
-            const file = document.querySelector("iframe");
-            if(file != null) {
-                let buttons = document.getElementsByClassName("ui-dialog-buttonset")[0];
-                let viewButton = document.createElement("button");
-                viewButton.classList.add("ui-button");
-                viewButton.classList.add("viewfile-button");
-                viewButton.innerHTML = "View file";
-                if(buttons == null) {
-                    console.log("No buttons found")
-                }
-                viewButton.addEventListener("click", ()=>{
-                    window.location.href = file.src;
-                });
-                if (buttons.getElementsByClassName("viewfile-button").length === 0) buttons.appendChild(viewButton);
-            }
-        }, 500);
-    }, 1000);
-    
-    
-}
+// This script is injected into the page when the extension is activated.
+// Made by Melwin Kramer 2023
 
-console.log("works")
+const createFileObserver = () => {
+  const fileObserver = setInterval(() => {
+    const fileSource = document.querySelector("iframe")?.src || undefined;
+    if (fileSource != undefined) {
+      let buttons = document.getElementsByClassName("ui-dialog-buttonset")[0];
+
+      let viewButton = document.createElement("button");
+      viewButton.classList.add("ui-button");
+      viewButton.classList.add("viewfile-button");
+      viewButton.innerHTML = "View file";
+      viewButton.before = "none";
+
+      if (buttons == null) {
+        console.error("No buttons found"); // Can only happen if StudIP changes the class name
+      }
+
+      viewButton.addEventListener("click", () => window.location.href = fileSource );
+      if (buttons.getElementsByClassName("viewfile-button").length === 0) buttons.appendChild(viewButton);
+    }else{ /* console.log("No file found"); */ }
+  }, 500); // 500ms interval, possiblily to low
+};
+
+const init = async () => {
+    /* This function is async everything initialized here should start without await(ing) something! */
+
+    createFileObserver();
+};
+
+init();
