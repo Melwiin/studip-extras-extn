@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "StudIP - Extras",
+    "version": "1.2.0",
+    "description": "StudIP - Extras",
+    "content_scripts": [{
+        "matches": [
+            "https://e-learning.tuhh.de/*",
+            "http://e-learning.tuhh.de/*"
+        ],
+        "js": ["src/scripts/contentScript.js"]
+    }],
+    "action": {
+        "default_icon": "assets/icon.png",
+        "default_title": "StudIP - Extras",
+        "default_popup": "src/html/popup.html"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "storage",
+        "activeTab",
+        "https://e-learning.tuhh.de/*",
+        "http://e-learning.tuhh.de/*"
+    ]
+}
