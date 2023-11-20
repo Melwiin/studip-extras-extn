@@ -1,0 +1,218 @@
+:root {
+    --main-bg-color: #0d0f11;
+    --main-bg-light-color: #282c34;
+    --main-bg-lighter-color: #515658;
+}
+
+/* -------------- Header and Logo ---------------- */
+
+#flex-header {
+  background-color: var(--main-bg-light-color);
+}
+
+.studip-logo {
+  background-image: none;
+}
+.studip-logo::before {
+  content: "< by Melwin >";
+  font-family: Consolas, monospace;
+  color: #e06c75;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: var(--main-bg-light-color);
+  transition: word-spacing 0.5s ease-in-out;
+}
+
+.studip-logo:hover::before {
+  word-spacing: 0.3rem;
+}
+
+/* Style the first and last letters in white */
+.studip-logo::before::first-letter {
+  color: white;
+}
+
+.studip-logo::before::after {
+  content: ">";
+  color: white;
+}
+
+/* ------------ END Header and Logo ------------- */
+
+/* -------------- Top Navigation ---------------- */
+#barBottomContainer {
+  background-color: var(--main-bg-light-color);
+  border: 1px solid #282c34;
+}
+
+body:not(.fixed) #barTopMenu li.active>a img, body:not(.fixed) #barTopMenu li:hover>a img, body:not(.fixed) #barTopMenu li a:focus>a img {
+    filter: hue-rotate(123deg) saturate(120%) brightness(170%) !important;
+}
+
+/* ------------ Search bar -------------- */
+
+#globalsearch-searchbar #globalsearch-input {
+    border-radius: 10px;
+    color: #eeeeee;
+
+    /* dark theme */
+    background-color: var(--main-bg-light-color);
+    border-color: #282c34;
+    border: 0;
+}
+
+#globalsearch-searchbar #globalsearch-input::placeholder {
+    color: #eeeeee;
+}
+
+#globalsearch-searchbar #globalsearch-input:focus {
+    border-color: #e06c75;
+    border: 0;
+    outline: none;
+}
+
+/* ------------ END Search bar -------------- */
+/* ------------ END Top Navigation ---------------- */
+
+#layout_wrapper #flex-header {
+    border-bottom: 0px;
+}
+
+body:not(.fixed) #barTopMenu img {
+    filter: hue-rotate(350deg) saturate(8.7%) brightness(1000%) !important;
+}
+body:not(.fixed) #barTopMenu>li.active {
+    border-bottom: 0;
+}
+
+body:not(.fixed) #barTopMenu>li:not(.active):after {
+    content: none;
+}
+body:not(.fixed) #barTopMenu>li.active:after {
+    content: none;
+}
+
+body:not(.fixed) #barTopMenu>li>a .navtitle, body:not(.fixed) #barTopMenu>li>label .navtitle {
+    color: #eeeeee;
+}
+
+.sidebar {
+
+}
+
+#layout_wrapper #layout_page .tabs_wrapper {
+    background-color: var(--main-bg-light-color);
+    border-bottom: 1px solid #282c34;
+}
+
+.icon-role-clickable.icon-shape-question-circle {
+    display: none;
+    filter: hue-rotate(350deg) saturate(8.7%) brightness(1000%) !important;
+}
+#layout_container {
+    background-color: var(--main-bg-color);
+}
+
+#layout-sidebar {
+    background-color: var(--main-bg-color);
+}
+
+#layout_content {
+    background: none !important;
+    background-color: var(--main-bg-color);
+}
+
+.studip-widget {
+    border-radius: 13px;
+    overflow: hidden;
+    background-color: var(--main-bg-light-color);
+    border: 0;
+    outline: 0;
+}
+
+.studip-widget:hover {
+    border: 0;
+    outline: 0;
+}
+
+.studip-widget .widget-header {
+    color: white;
+    background-color: var(--main-bg-light-color);
+}
+
+.studip-widget .mainmenu > a {
+    color: white;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.studip-widget .mainmenu > a:hover {
+    font-size: 20px;
+}
+.studip-widget .mainmenu font > a {
+    color: rgb(198, 198, 198);
+}
+
+h1 a img {
+    filter: hue-rotate(350deg) saturate(8.7%) brightness(1000%) !important;
+
+}
+
+article.studip {
+    outline: 0;
+    border: 0;
+}
+
+.ui-widget-content {
+    background-color: var(--main-bg-lighter-color);
+    border-radius: 12px;
+    color: white;
+}
+
+.ui-widget-content {
+    background-color: var(--main-bg-lighter-color);
+    border-radius: 12px;
+    color: white;
+}
+
+.formatted-content a {
+    color: #e06c75;
+}
+
+.formatted-content a::before {
+    filter: hue-rotate(350deg) saturate(8.7%) brightness(1000%) !important;
+
+}
+
+article.studip>header>nav>* {
+    color: white !important;
+}
+
+article.studip.toggle>header {
+    background-color: var(--main-bg-light-color);
+    color: white;
+    border-radius: 10px;
+    outline: 0;
+    overflow: hidden;
+}
+
+article.studip>header h1>a {
+    color: white;
+}
+
+article.studip.toggle>header h1>a:before {
+    filter: hue-rotate(122deg) brightness(2);
+}
+
+#stream-container .activity header .activity-heading h3 {
+    color: white;
+}
+
+a, a:link, a:visited {
+    color: #e06c75;
+}

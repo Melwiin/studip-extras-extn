@@ -25,5 +25,11 @@
         "tabs",
         "storage",
         "activeTab"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["src/styles/darkTheme.css"],
+            "matches": ["https://e-learning.tuhh.de/*", "http://e-learning.tuhh.de/*"]
+        }
     ]
 }
